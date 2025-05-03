@@ -7,7 +7,7 @@ export async function POST(request: Request) {
     const { idToken } = await request.json();
 
     // Verify the ID token
-    const decodedToken = await adminAuth.verifyIdToken(idToken);
+    await adminAuth.verifyIdToken(idToken);
 
     // Create session cookie
     const expiresIn = 60 * 60 * 24 * 5 * 1000; // 5 days
@@ -16,8 +16,8 @@ export async function POST(request: Request) {
     });
 
     // Set the session cookie
-    const cookieStore = cookies();
-    cookieStore.set("session", sessionCookie, {
+    const cookieStore = await cookies();
+    await cookieStore.set("session", sessionCookie, {
       maxAge: expiresIn,
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",

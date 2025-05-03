@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
 import { SxProps, Theme } from "@mui/material/styles";
 
-export default function FullPageLoader(): JSX.Element {
+export default function FullPageLoader(): React.ReactElement {
   const boxStyles: SxProps<Theme> = {
     position: "fixed",
     inset: 0,

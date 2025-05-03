@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import styles from "./login.module.css";
 
-export default function LoginWithGoogle(): JSX.Element {
+export default function LoginWithGoogle(): React.ReactElement {
   // Initialize router for navigation
   const router = useRouter();
 

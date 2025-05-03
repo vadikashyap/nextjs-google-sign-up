@@ -8,7 +8,7 @@ import LoginWithGoogle from "@/components/LoginWithGoogle";
 import FullPageLoader from "@/components/FullPageLoader";
 import { useState } from "react";
 
-export default function Home(): JSX.Element {
+export default function Home(): React.ReactElement {
   // Initialize router and loading state
   const router = useRouter();
   const [loading, setLoading] = useState<boolean>(true);

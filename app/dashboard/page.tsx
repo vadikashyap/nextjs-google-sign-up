@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import FullPageLoader from "@/components/FullPageLoader";
 import styles from "./Dashboard.module.css";
 
-export default function Dashboard(): JSX.Element {
+export default function Dashboard(): React.ReactElement {
   // Initialize router and state variables
   const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
